@@ -12,6 +12,7 @@
 		D38F257A1E8DDF8800A13D3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38F25781E8DDF8800A13D3A /* Main.storyboard */; };
 		D38F257C1E8DDF8800A13D3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38F257B1E8DDF8800A13D3A /* Assets.xcassets */; };
 		D38F257F1E8DDF8800A13D3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38F257D1E8DDF8800A13D3A /* LaunchScreen.storyboard */; };
+		D3D6723F1E92C9530007CBA1 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D6723E1E92C9530007CBA1 /* LevelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D38F257B1E8DDF8800A13D3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D38F257E1E8DDF8800A13D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D38F25801E8DDF8800A13D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3D6723E1E92C9530007CBA1 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				D38F25741E8DDF8800A13D3A /* AppDelegate.swift */,
 				D38F25761E8DDF8800A13D3A /* ViewController.swift */,
 				D38F25781E8DDF8800A13D3A /* Main.storyboard */,
+				D3D6723E1E92C9530007CBA1 /* LevelViewController.swift */,
 				D38F257B1E8DDF8800A13D3A /* Assets.xcassets */,
 				D38F257D1E8DDF8800A13D3A /* LaunchScreen.storyboard */,
 				D38F25801E8DDF8800A13D3A /* Info.plist */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D6723F1E92C9530007CBA1 /* LevelViewController.swift in Sources */,
 				D38F25771E8DDF8800A13D3A /* ViewController.swift in Sources */,
 				D38F25751E8DDF8800A13D3A /* AppDelegate.swift in Sources */,
 			);
@@ -301,6 +305,7 @@
 				D38F25851E8DDF8800A13D3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
