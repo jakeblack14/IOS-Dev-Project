@@ -30,18 +30,18 @@ class LevelViewController: UIViewController {
 
         // prep accelerometer manager to recieve updates
         // and place updates in the corresponding text labels
-        if manager.isAccelerometerAvailable {
-            manager.accelerometerUpdateInterval = 0.01
-            manager.startAccelerometerUpdates(to: .main, withHandler: {
-                [weak self] (data: CMAccelerometerData?, error: Error?) in
-                if let acceleration = data?.acceleration {
-                    self?.XLabel.text = acceleration.x.description
-                    self?.YLabel.text = acceleration.y.description
-                    self?.ZLabel.text = acceleration.z.description
+        if manager.isDeviceMotionAvailable {
+            manager.deviceMotionUpdateInterval = 0.01
+            manager.startDeviceMotionUpdates(to: .main, withHandler: {
+                [weak self] (data: CMDeviceMotion?, error: Error?) in
+                if let motion = data?.rotationRate {
+                    self?.XLabel.text = motion.x.description
+                    self?.YLabel.text = motion.y.description
+                    self?.ZLabel.text = motion.z.description
                     
-                    self?.XSlider.setValue(Float(acceleration.x), animated: true)
-                    self?.YSlider.setValue(Float(acceleration.y), animated: true)
-                    self?.ZSlider.setValue(Float(acceleration.z), animated: true)
+                    self?.XSlider.setValue(Float(motion.x), animated: true)
+                    self?.YSlider.setValue(Float(motion.y), animated: true)
+                    self?.ZSlider.setValue(Float(motion.z), animated: true)
                 }
             })
         }
@@ -58,7 +58,7 @@ class LevelViewController: UIViewController {
     
     // must stop updates when view disappears
     override func viewWillDisappear(_ animated: Bool) {
-        manager.stopAccelerometerUpdates()
+        manager.stopDeviceMotionUpdates()
     }
     
 }
