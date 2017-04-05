@@ -14,8 +14,8 @@ class CompassViewController: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var DirectionLabel: UILabel!
     var locationManager:CLLocationManager!
     
-    
     @IBOutlet weak var CompassImageView: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

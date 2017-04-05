@@ -359,7 +359,7 @@
                     <navigationItem key="navigationItem" title="Compass" id="Tsb-od-cXl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="CompassImageView" destination="8Sf-LM-pDw" id="iLU-Kx-w4K"/>
+                        <outlet property="CompassImageView" destination="8Sf-LM-pDw" id="VoN-jI-hs7"/>
                         <outlet property="DirectionLabel" destination="tvS-1X-WjI" id="Xgi-6q-XYC"/>
                         <outlet property="d" destination="8Sf-LM-pDw" id="8jJ-HC-tgw"/>
                     </connections>
