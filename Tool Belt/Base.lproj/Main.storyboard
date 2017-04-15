@@ -411,11 +411,11 @@
             </objects>
             <point key="canvasLocation" x="1740" y="1307"/>
         </scene>
-        <!--Item-->
+        <!--Compass-->
         <scene sceneID="9XT-fc-IOT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rxr-a7-jWF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MNF-gX-9Pv"/>
+                    <tabBarItem key="tabBarItem" title="Compass" id="MNF-gX-9Pv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mYe-RE-ggp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
