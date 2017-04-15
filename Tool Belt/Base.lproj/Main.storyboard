@@ -98,7 +98,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yq-Kp-uHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="7Ne-Sn-Afh"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="546"/>
+            <point key="canvasLocation" x="2679.1999999999998" y="545.57721139430294"/>
         </scene>
         <!--Choose Image...-->
         <scene sceneID="4Un-UV-nOW">
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dd2-OW-Hdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3606" y="546"/>
+            <point key="canvasLocation" x="4544.8000000000002" y="545.57721139430294"/>
         </scene>
         <!--Level-->
         <scene sceneID="pLh-Uu-QzE">
@@ -249,7 +249,7 @@
                         <segue destination="Zhu-tR-9af" kind="relationship" relationship="viewControllers" id="gAa-A2-4Ug"/>
                         <segue destination="YGf-cU-Grr" kind="relationship" relationship="viewControllers" id="Hgi-Vr-dJC"/>
                         <segue destination="D7i-4a-zQh" kind="relationship" relationship="viewControllers" id="6Xs-T7-Nby"/>
-                        <segue destination="lJI-m6-B2G" kind="relationship" relationship="viewControllers" id="GrQ-PH-1Yx"/>
+                        <segue destination="Rxr-a7-jWF" kind="relationship" relationship="viewControllers" id="obI-z4-mnx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haF-DG-16b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,52 +335,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RG3-eb-hcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="547"/>
-        </scene>
-        <!--Compass-->
-        <scene sceneID="drY-9i-hSN">
-            <objects>
-                <viewController id="Z7I-h5-rdW" customClass="CompassViewController" customModule="Tool_Belt" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8Pa-Hk-9kf"/>
-                        <viewControllerLayoutGuide type="bottom" id="rK4-ER-nsl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vug-pL-ic3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvS-1X-WjI">
-                                <rect key="frame" x="16" y="92" width="343" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="67"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z19-Mh-Scu">
-                                <rect key="frame" x="26" y="178" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.025873014940000001" blue="0.1164182743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="compass" translatesAutoresizingMaskIntoConstraints="NO" id="8Sf-LM-pDw">
-                                <rect key="frame" x="16" y="186" width="343" height="424"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Compass" id="Tsb-od-cXl"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="CompassImageView" destination="8Sf-LM-pDw" id="VoN-jI-hs7"/>
-                        <outlet property="DirectionLabel" destination="tvS-1X-WjI" id="Xgi-6q-XYC"/>
-                        <outlet property="d" destination="8Sf-LM-pDw" id="8jJ-HC-tgw"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gSN-wQ-VZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1740" y="1331.784107946027"/>
+            <point key="canvasLocation" x="1740" y="546.47676161919048"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nUu-hy-MQR">
@@ -398,7 +353,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWS-vw-0Bm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2666" y="546"/>
+            <point key="canvasLocation" x="3604" y="545.57721139430294"/>
         </scene>
         <!--Ruler-->
         <scene sceneID="ZIH-yb-Zm3">
@@ -420,23 +375,56 @@
             <point key="canvasLocation" x="801" y="-899"/>
         </scene>
         <!--Compass-->
-        <scene sceneID="9za-LU-sGB">
+        <scene sceneID="oNA-n5-h0H">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lJI-m6-B2G" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Compass" id="qbi-ZM-ueS"/>
+                <viewController id="Vst-tK-5OX" customClass="CompassViewController1" customModule="Tool_Belt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Adh-PC-c3t"/>
+                        <viewControllerLayoutGuide type="bottom" id="hiP-ii-4H9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MpF-aw-nEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="compass" translatesAutoresizingMaskIntoConstraints="NO" id="dDy-KL-XfL">
+                                <rect key="frame" x="16" y="186" width="343" height="424"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqX-Z6-fol">
+                                <rect key="frame" x="16" y="57" width="343" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="67"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Compass" id="7FS-fX-Ykk"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6c-1G-ytl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="1307"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="9XT-fc-IOT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rxr-a7-jWF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="MNF-gX-9Pv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7nb-PF-lRT">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mYe-RE-ggp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Z7I-h5-rdW" kind="relationship" relationship="rootViewController" id="oo2-m5-RVq"/>
+                        <segue destination="Vst-tK-5OX" kind="relationship" relationship="rootViewController" id="TGR-nm-Yuk"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pV1-ko-nmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLQ-lv-6Tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800.79999999999995" y="1331.784107946027"/>
+            <point key="canvasLocation" x="801" y="1307"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		D3197AA31E9466FD00BB6802 /* RulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197AA21E9466FD00BB6802 /* RulerViewController.swift */; };
 		D3197AA51E94696900BB6802 /* RGBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197AA41E94696900BB6802 /* RGBViewController.swift */; };
-		D3197AA71E946AA000BB6802 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197AA61E946AA000BB6802 /* CompassViewController.swift */; };
+		D3197AA71E946AA000BB6802 /* CompassViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197AA61E946AA000BB6802 /* CompassViewController1.swift */; };
+		D384E2541EA27A3F0000D8FD /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D384E2531EA27A3F0000D8FD /* CompassViewController.swift */; };
 		D38F25751E8DDF8800A13D3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F25741E8DDF8800A13D3A /* AppDelegate.swift */; };
 		D38F257A1E8DDF8800A13D3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D38F25781E8DDF8800A13D3A /* Main.storyboard */; };
 		D38F257C1E8DDF8800A13D3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38F257B1E8DDF8800A13D3A /* Assets.xcassets */; };
@@ -20,7 +21,8 @@
 /* Begin PBXFileReference section */
 		D3197AA21E9466FD00BB6802 /* RulerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulerViewController.swift; sourceTree = "<group>"; };
 		D3197AA41E94696900BB6802 /* RGBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBViewController.swift; sourceTree = "<group>"; };
-		D3197AA61E946AA000BB6802 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		D3197AA61E946AA000BB6802 /* CompassViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController1.swift; sourceTree = "<group>"; };
+		D384E2531EA27A3F0000D8FD /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		D38F25711E8DDF8800A13D3A /* Tool Belt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tool Belt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38F25741E8DDF8800A13D3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D38F25791E8DDF8800A13D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,7 +66,8 @@
 				D38F25781E8DDF8800A13D3A /* Main.storyboard */,
 				D3197AA41E94696900BB6802 /* RGBViewController.swift */,
 				D3197AA21E9466FD00BB6802 /* RulerViewController.swift */,
-				D3197AA61E946AA000BB6802 /* CompassViewController.swift */,
+				D3197AA61E946AA000BB6802 /* CompassViewController1.swift */,
+				D384E2531EA27A3F0000D8FD /* CompassViewController.swift */,
 				D3D6723E1E92C9530007CBA1 /* LevelViewController.swift */,
 				D38F257B1E8DDF8800A13D3A /* Assets.xcassets */,
 				D38F257D1E8DDF8800A13D3A /* LaunchScreen.storyboard */,
@@ -146,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3197AA71E946AA000BB6802 /* CompassViewController.swift in Sources */,
+				D384E2541EA27A3F0000D8FD /* CompassViewController.swift in Sources */,
+				D3197AA71E946AA000BB6802 /* CompassViewController1.swift in Sources */,
 				D3D6723F1E92C9530007CBA1 /* LevelViewController.swift in Sources */,
 				D3197AA51E94696900BB6802 /* RGBViewController.swift in Sources */,
 				D3197AA31E9466FD00BB6802 /* RulerViewController.swift in Sources */,
