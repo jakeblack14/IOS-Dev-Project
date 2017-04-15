@@ -105,6 +105,7 @@
 				TargetAttributes = {
 					D38F25701E8DDF8800A13D3A = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 59WJ8LV76Y;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,7 +275,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59WJ8LV76Y;
 				INFOPLIST_FILE = "Tool Belt/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.harding.ndaughety.Tool-Belt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,7 +289,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59WJ8LV76Y;
 				INFOPLIST_FILE = "Tool Belt/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.harding.ndaughety.Tool-Belt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
