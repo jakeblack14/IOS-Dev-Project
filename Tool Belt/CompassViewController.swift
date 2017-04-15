@@ -11,17 +11,18 @@ import CoreLocation
 
 class CompassViewController: UIViewController, CLLocationManagerDelegate {
     
+    
     @IBOutlet weak var DirectionLabel: UILabel!
-    var locationManager:CLLocationManager!
-    
     @IBOutlet weak var CompassImageView: UIImageView!
-    
+
+    var locationManager:CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         locationManager  = CLLocationManager()
         locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingHeading()
     }
     
@@ -64,5 +65,10 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
 //        resetCompassHeading(to: heading.magneticHeading)
 //        
 //    }
+    
+    @objc func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+        locationManager.stopUpdatingLocation()
+    }
 
 }
