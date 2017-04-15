@@ -377,7 +377,7 @@
         <!--Compass-->
         <scene sceneID="oNA-n5-h0H">
             <objects>
-                <viewController id="Vst-tK-5OX" customClass="CompassViewController1" customModule="Tool_Belt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vst-tK-5OX" customClass="CompassViewController" customModule="Tool_Belt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Adh-PC-c3t"/>
                         <viewControllerLayoutGuide type="bottom" id="hiP-ii-4H9"/>
