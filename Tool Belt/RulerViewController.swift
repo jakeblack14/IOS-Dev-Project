@@ -9,16 +9,26 @@
 import UIKit
 import CoreMotion
 
+
 class RulerViewController: UIViewController {
 
     let manager = CMMotionManager()
 
     @IBOutlet weak var DistanceLabel: UILabel!
     @IBOutlet weak var ErrorLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    var imageToAdd: UIImage?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imageView.image = UIImage(named: "rulerInch.png");
+        self.view.addSubview(imageView);
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // prep accelerometer manager to recieve updates
         // and place updates in the corresponding text labels
         if manager.isAccelerometerAvailable {
@@ -40,3 +50,10 @@ class RulerViewController: UIViewController {
         manager.stopAccelerometerUpdates()
     }
 }
+
+
+
+
+
+
+
