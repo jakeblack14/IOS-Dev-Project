@@ -37,33 +37,33 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     private func locationManager(manager: CLLocationManager!, didUpdateHeading heading: CLHeading!) {
-        
-        // A value of 0 means north, 90 means east,
-        // 180 means south, 270 means west 
-        // and everything else in between.
-        switch heading.magneticHeading
-        {
-        case 0:
-            DirectionLabel.text = "North"
-        case 0..<90:
-            DirectionLabel.text = "Northeast"
-        case 90:
-            DirectionLabel.text = "East"
-        case 90..<180:
-            DirectionLabel.text = "Southeast"
-        case 180:
-            DirectionLabel.text = "South"
-        case 180..<270:
-            DirectionLabel.text = "Southwest"
-        case 270:
-            DirectionLabel.text = "West"
-        case 270..<360:
-            DirectionLabel.text = "Northwest"
-        default:
-            DirectionLabel.text = "Unavailable"
-        }
-        
-        resetCompassHeading(to: heading.magneticHeading)
+        DirectionLabel.text = heading.magneticHeading.description
+//        // A value of 0 means north, 90 means east,
+//        // 180 means south, 270 means west 
+//        // and everything else in between.
+//        switch heading.magneticHeading
+//        {
+//        case 0:
+//            DirectionLabel.text = "North"
+//        case 0..<90:
+//            DirectionLabel.text = "Northeast"
+//        case 90:
+//            DirectionLabel.text = "East"
+//        case 90..<180:
+//            DirectionLabel.text = "Southeast"
+//        case 180:
+//            DirectionLabel.text = "South"
+//        case 180..<270:
+//            DirectionLabel.text = "Southwest"
+//        case 270:
+//            DirectionLabel.text = "West"
+//        case 270..<360:
+//            DirectionLabel.text = "Northwest"
+//        default:
+//            DirectionLabel.text = "Unavailable"
+//        }
+//        
+//        resetCompassHeading(to: heading.magneticHeading)
         
     }
     
