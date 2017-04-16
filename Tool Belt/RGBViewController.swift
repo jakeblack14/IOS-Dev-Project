@@ -10,8 +10,6 @@ import UIKit
 import Foundation
 
 
-
-
 class RGBViewController: UIViewController,
     UIImagePickerControllerDelegate,
 UINavigationControllerDelegate  {
@@ -20,9 +18,11 @@ UINavigationControllerDelegate  {
     @IBOutlet weak var myImageView: UIImageView!
     
     @IBAction func LongPressGesture(_ sender: UILongPressGestureRecognizer) {
-        
+    
         
     }
+    
+    
     let picker = UIImagePickerController()
 
     @IBAction func photoFromLibrary(_ sender: UIButton) {
@@ -38,7 +38,7 @@ UINavigationControllerDelegate  {
      
     }
 
-    func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject])
+    private func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
         myImageView.contentMode = .scaleAspectFit //3
