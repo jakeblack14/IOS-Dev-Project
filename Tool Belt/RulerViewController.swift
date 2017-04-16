@@ -23,9 +23,6 @@ class RulerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imageView.image = UIImage(named: "rulerInch.png");
-        self.view.addSubview(imageView);
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
