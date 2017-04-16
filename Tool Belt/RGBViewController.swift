@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Foundation
 
+<<<<<<< HEAD
 
 class RGBViewController: UIViewController,
     UIImagePickerControllerDelegate,
@@ -24,20 +24,15 @@ UINavigationControllerDelegate  {
     
     
     let picker = UIImagePickerController()
+=======
+class RGBViewController: UIViewController {
+    @IBOutlet weak var ErrorLabel: UILabel!
+>>>>>>> parent of 21d5b24... Updated RGB
 
-    @IBAction func photoFromLibrary(_ sender: UIButton) {
-        picker.allowsEditing = false
-        picker.sourceType = .photoLibrary
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        present(picker, animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        picker.delegate = self
-     
-    }
 
+<<<<<<< HEAD
     private func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
@@ -51,8 +46,10 @@ UINavigationControllerDelegate  {
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             dismiss(animated: true, completion: nil)
         }
+=======
+        ErrorLabel.text = "This feature is unavailable on this device."
+>>>>>>> parent of 21d5b24... Updated RGB
     }
-    
 
 
 }
