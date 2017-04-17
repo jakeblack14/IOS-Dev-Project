@@ -25,9 +25,6 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="496"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="7Ne-Sn-Afh" appends="YES" id="CyP-FQ-wqP"/>
-                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-xo-1zH">
                                 <rect key="frame" x="16" y="532" width="22" height="21"/>
@@ -70,7 +67,7 @@
                                 <color key="backgroundColor" red="0.69862457225375363" green="0.85098836143674816" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Choose Image..."/>
                                 <connections>
-                                    <segue destination="X9F-rc-uC5" kind="show" identifier="chooseImage" id="EgC-u1-Gha"/>
+                                    <action selector="photoFromLibrary:" destination="2hv-Ez-t9q" eventType="touchUpInside" id="Jlb-7S-22m"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-o0-lve">
@@ -80,56 +77,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7af-qk-gLM">
-                                <rect key="frame" x="26" y="178" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.025873014940000001" blue="0.1164182743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="RGB Interpretor" id="WIe-ho-y5p"/>
                     <connections>
-                        <outlet property="ErrorLabel" destination="7af-qk-gLM" id="1c2-MD-KeS"/>
+                        <outlet property="myImageView" destination="SaO-1w-j12" id="DWx-2r-5Pe"/>
+                        <outlet property="photoFromLibrary" destination="gHP-6W-Xao" id="CV8-rj-5ha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yq-Kp-uHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="7Ne-Sn-Afh"/>
             </objects>
             <point key="canvasLocation" x="2679.1999999999998" y="545.57721139430294"/>
-        </scene>
-        <!--Choose Image...-->
-        <scene sceneID="4Un-UV-nOW">
-            <objects>
-                <viewController id="N29-nd-yPh" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qhE-vH-pWW"/>
-                        <viewControllerLayoutGuide type="bottom" id="KY5-yz-FVu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h4d-5d-toO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6t-Tj-jbI">
-                                <rect key="frame" x="0.0" y="28" width="375" height="487"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pc3-mS-q8i">
-                                <rect key="frame" x="16" y="523" width="343" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.69862457229999997" green="0.8509883614" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.69862457229999997" green="0.8509883614" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Choose Image..." id="JG2-to-pix"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dd2-OW-Hdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4544.8000000000002" y="545.57721139430294"/>
         </scene>
         <!--Level-->
         <scene sceneID="pLh-Uu-QzE">
@@ -336,24 +295,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RG3-eb-hcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1740" y="546.47676161919048"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nUu-hy-MQR">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X9F-rc-uC5" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GSv-8W-RkY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="N29-nd-yPh" kind="relationship" relationship="rootViewController" id="QcM-pe-wiI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gWS-vw-0Bm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3604" y="545.57721139430294"/>
         </scene>
         <!--Ruler-->
         <scene sceneID="ZIH-yb-Zm3">
