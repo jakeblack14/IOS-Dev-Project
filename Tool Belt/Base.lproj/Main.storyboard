@@ -82,6 +82,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="RGB Interpretor" id="WIe-ho-y5p"/>
                     <connections>
+                        <outlet property="BlueLabel" destination="p6B-o0-lve" id="Ue8-vy-c7k"/>
+                        <outlet property="GreenLabel" destination="f2Q-TC-sZt" id="7fY-zN-O2h"/>
+                        <outlet property="RedLabel" destination="Xik-YR-nF2" id="emT-5d-Igr"/>
                         <outlet property="myImageView" destination="SaO-1w-j12" id="DWx-2r-5Pe"/>
                         <outlet property="photoFromLibrary" destination="gHP-6W-Xao" id="CV8-rj-5ha"/>
                     </connections>
