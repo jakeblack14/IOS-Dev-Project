@@ -17,23 +17,36 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
 
     var locationManager:CLLocationManager!
     
+    // transform compass arrow to point north at all times
+    private func resetCompassHeading(to direction: Double?) {
+        CompassImageView.transform = CGAffineTransform(rotationAngle: CGFloat(direction! * .pi / 180))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager  = CLLocationManager()
+        locationManager = CLLocationManager()
         locationManager.delegate = self
+        locationManager.headingOrientation = .portrait
+        locationManager.headingFilter = kCLHeadingFilterNone
+
         locationManager.requestWhenInUseAuthorization()
+    }
+    
+    // start updating the user's heading
+    override func viewWillAppear(_ animated: Bool) {
         locationManager.startUpdatingHeading()
     }
     
     // stop updating users location when not in view
     override func viewWillDisappear(_ animated: Bool) {
-        locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingHeading()
     }
     
-    // transform compass arrow to point north at all times
-    private func resetCompassHeading(to direction: Double?) {
-        CompassImageView.transform = CGAffineTransform(rotationAngle: CGFloat(direction! * .pi / 180))
+    // Heading readings tend to be widely inaccurate until the system has calibrated itself
+    // Return true here allows iOS to show a calibration view when iOS wants to improve itself
+    func locationManagerShouldDisplayHeadingCalibration(_ manager: CLLocationManager) -> Bool {
+        return true
     }
     
     private func locationManager(manager: CLLocationManager!, didUpdateHeading heading: CLHeading!) {
@@ -44,21 +57,21 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
 //        switch heading.magneticHeading
 //        {
 //        case 0:
-//            DirectionLabel.text = "North"
+//            DirectionLabel.text = "N"
 //        case 0..<90:
-//            DirectionLabel.text = "Northeast"
+//            DirectionLabel.text = "NE"
 //        case 90:
-//            DirectionLabel.text = "East"
+//            DirectionLabel.text = "E"
 //        case 90..<180:
-//            DirectionLabel.text = "Southeast"
+//            DirectionLabel.text = "SE"
 //        case 180:
-//            DirectionLabel.text = "South"
+//            DirectionLabel.text = "S"
 //        case 180..<270:
-//            DirectionLabel.text = "Southwest"
+//            DirectionLabel.text = "SW"
 //        case 270:
-//            DirectionLabel.text = "West"
+//            DirectionLabel.text = "W"
 //        case 270..<360:
-//            DirectionLabel.text = "Northwest"
+//            DirectionLabel.text = "NW"
 //        default:
 //            DirectionLabel.text = "Unavailable"
 //        }
@@ -68,8 +81,8 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @objc func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Failed to find user's location: \(error.localizedDescription)")
-        locationManager.stopUpdatingLocation()
+        print("Failed to find user's heading: \(error.localizedDescription)")
+        locationManager.stopUpdatingHeading()
     }
 
 }
