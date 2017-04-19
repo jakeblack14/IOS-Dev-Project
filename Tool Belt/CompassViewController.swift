@@ -19,6 +19,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     
     // transform compass arrow to point north at all times
     private func resetCompassHeading(to direction: Double?) {
+        // must convert degrees to radians
         CompassImageView.transform = CGAffineTransform(rotationAngle: CGFloat(direction! * .pi / 180))
     }
     
@@ -27,12 +28,12 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         print("viewDidLoad")
         
         locationManager = CLLocationManager()
-        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
         
         // location
         locationManager.distanceFilter = 1000;
-        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         
         // heading
         locationManager.headingOrientation = .portrait
@@ -42,12 +43,14 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     // start updating the user's heading
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear")
+        locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
     }
     
     // stop updating users location when not in view
     override func viewWillDisappear(_ animated: Bool) {
         locationManager.stopUpdatingHeading()
+        locationManager.startUpdatingLocation()
     }
     
     // Heading readings tend to be widely inaccurate until the system has calibrated itself
@@ -56,46 +59,50 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         return true
     }
     
-    private func locationManager(manager: CLLocationManager!, didUpdateHeading heading: CLHeading!) {
-        print("My current heading is: " + heading.magneticHeading.description)
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        print("I am updating my heading")
         
-        // A value of 0 means north, 90 means east,
-        // 180 means south, 270 means west 
-        // and everything else in between.
-        switch heading.magneticHeading
-        {
-        case 0:
-            DirectionLabel.text = "N"
-        case 0..<90:
-            DirectionLabel.text = "NE"
-        case 90:
-            DirectionLabel.text = "E"
-        case 90..<180:
-            DirectionLabel.text = "SE"
-        case 180:
-            DirectionLabel.text = "S"
-        case 180..<270:
-            DirectionLabel.text = "SW"
-        case 270:
-            DirectionLabel.text = "W"
-        case 270..<360:
-            DirectionLabel.text = "NW"
-        default:
-            DirectionLabel.text = "Unavailable"
-        }
+        //        print("My current heading is: " + heading.magneticHeading.description)
+        //
+        //        // A value of 0 means north, 90 means east,
+        //        // 180 means south, 270 means west
+        //        // and everything else in between.
+        //        switch heading.magneticHeading
+        //        {
+        //        case 0:
+        //            DirectionLabel.text = "N"
+        //        case 0..<90:
+        //            DirectionLabel.text = "NE"
+        //        case 90:
+        //            DirectionLabel.text = "E"
+        //        case 90..<180:
+        //            DirectionLabel.text = "SE"
+        //        case 180:
+        //            DirectionLabel.text = "S"
+        //        case 180..<270:
+        //            DirectionLabel.text = "SW"
+        //        case 270:
+        //            DirectionLabel.text = "W"
+        //        case 270..<360:
+        //            DirectionLabel.text = "NW"
+        //        default:
+        //            DirectionLabel.text = "Unavailable"
+        //        }
+        //
+        //        if DirectionLabel.text != "Unavailable" {
+        //            resetCompassHeading(to: heading.magneticHeading)
+        //        }
+        //        else {
+        //            resetCompassHeading(to: 0)
+        //        }
         
-        if DirectionLabel.text != "Unavailable" {
-            resetCompassHeading(to: heading.magneticHeading)
-        }
-        else {
-            resetCompassHeading(to: 0)
-        }
-        
+
     }
     
     @objc func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's heading: \(error.localizedDescription)")
         locationManager.stopUpdatingHeading()
+        locationManager.startUpdatingLocation()
     }
 
 }
