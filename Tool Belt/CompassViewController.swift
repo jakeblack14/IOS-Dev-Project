@@ -60,41 +60,39 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        print("I am updating my heading")
+                print("My current heading is: " + newHeading.magneticHeading.description)
         
-        //        print("My current heading is: " + heading.magneticHeading.description)
-        //
-        //        // A value of 0 means north, 90 means east,
-        //        // 180 means south, 270 means west
-        //        // and everything else in between.
-        //        switch heading.magneticHeading
-        //        {
-        //        case 0:
-        //            DirectionLabel.text = "N"
-        //        case 0..<90:
-        //            DirectionLabel.text = "NE"
-        //        case 90:
-        //            DirectionLabel.text = "E"
-        //        case 90..<180:
-        //            DirectionLabel.text = "SE"
-        //        case 180:
-        //            DirectionLabel.text = "S"
-        //        case 180..<270:
-        //            DirectionLabel.text = "SW"
-        //        case 270:
-        //            DirectionLabel.text = "W"
-        //        case 270..<360:
-        //            DirectionLabel.text = "NW"
-        //        default:
-        //            DirectionLabel.text = "Unavailable"
-        //        }
-        //
-        //        if DirectionLabel.text != "Unavailable" {
-        //            resetCompassHeading(to: heading.magneticHeading)
-        //        }
-        //        else {
-        //            resetCompassHeading(to: 0)
-        //        }
+                // A value of 0 means north, 90 means east,
+                // 180 means south, 270 means west
+                // and everything else in between.
+                switch newHeading.magneticHeading
+                {
+                case 0:
+                    DirectionLabel.text = "N"
+                case 0..<90:
+                    DirectionLabel.text = "NE"
+                case 90:
+                    DirectionLabel.text = "E"
+                case 90..<180:
+                    DirectionLabel.text = "SE"
+                case 180:
+                    DirectionLabel.text = "S"
+                case 180..<270:
+                    DirectionLabel.text = "SW"
+                case 270:
+                    DirectionLabel.text = "W"
+                case 270..<360:
+                    DirectionLabel.text = "NW"
+                default:
+                    DirectionLabel.text = "Unavailable"
+                }
+        
+                if DirectionLabel.text != "Unavailable" {
+                    resetCompassHeading(to: newHeading.magneticHeading)
+                }
+                else {
+                    resetCompassHeading(to: 0)
+                }
         
 
     }
