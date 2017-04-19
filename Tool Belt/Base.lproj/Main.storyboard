@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaO-1w-j12">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White" translatesAutoresizingMaskIntoConstraints="NO" id="SaO-1w-j12">
                                 <rect key="frame" x="0.0" y="20" width="375" height="496"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -373,6 +373,7 @@
         <!--Compass-->
         <scene sceneID="9XT-fc-IOT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLQ-lv-6Tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rxr-a7-jWF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Compass" id="ZtI-Jf-hi5"/>
                     <toolbarItems/>
@@ -386,12 +387,12 @@
                         <segue destination="Vst-tK-5OX" kind="relationship" relationship="rootViewController" id="TGR-nm-Yuk"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RLQ-lv-6Tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="801" y="-1003"/>
         </scene>
     </scenes>
     <resources>
+        <image name="White" width="200" height="200"/>
         <image name="compass" width="300" height="289"/>
     </resources>
 </document>

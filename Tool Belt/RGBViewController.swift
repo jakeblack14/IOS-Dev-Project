@@ -72,7 +72,8 @@ extension UIImage {
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             if let touch = touches.first {
                 let position = touch.location(in: self.myImageView)
-                let colorAtPixel : UIColor = (myImageView.image?.getPixelColor(pos: CGPoint(x: position.x, y: position.y)))!
+               let colorAtPixel : UIColor = (myImageView.image?.getPixelColor(pos: CGPoint(x: position.x, y: position.y)))!
+               
                 print(colorAtPixel.rgb()!)
                 RedLabel.text = String(describing: colorAtPixel.rgb()!.red)
                 GreenLabel.text = String(describing: colorAtPixel.rgb()!.green)
