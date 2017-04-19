@@ -14,7 +14,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var DirectionLabel: UILabel!
     @IBOutlet weak var CompassImageView: UIImageView!
-
+    
     var locationManager:CLLocationManager!
     
     // transform compass arrow to point north at all times
@@ -25,8 +25,8 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
         
+        // set up location manager
         locationManager = CLLocationManager()
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
@@ -40,14 +40,15 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.headingFilter = 5
     }
     
-    // start updating the user's heading
+    // start updating the user's location/heading
     override func viewWillAppear(_ animated: Bool) {
-        print("viewWillAppear")
+        DirectionLabel.adjustsFontSizeToFitWidth = true
+        DirectionLabel.textColor = .blue
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
     }
     
-    // stop updating users location when not in view
+    // stop updating users location/heading when view disappears
     override func viewWillDisappear(_ animated: Bool) {
         locationManager.stopUpdatingHeading()
         locationManager.startUpdatingLocation()
@@ -60,47 +61,50 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-                print("My current heading is: " + newHeading.magneticHeading.description)
+        print("My current heading is: " + newHeading.magneticHeading.description)
         
-                // A value of 0 means north, 90 means east,
-                // 180 means south, 270 means west
-                // and everything else in between.
-                switch newHeading.magneticHeading
-                {
-                case 0:
-                    DirectionLabel.text = "N"
-                case 0..<90:
-                    DirectionLabel.text = "NE"
-                case 90:
-                    DirectionLabel.text = "E"
-                case 90..<180:
-                    DirectionLabel.text = "SE"
-                case 180:
-                    DirectionLabel.text = "S"
-                case 180..<270:
-                    DirectionLabel.text = "SW"
-                case 270:
-                    DirectionLabel.text = "W"
-                case 270..<360:
-                    DirectionLabel.text = "NW"
-                default:
-                    DirectionLabel.text = "Unavailable"
-                }
+        // A value of 0 means north, 90 means east,
+        // 180 means south, 270 means west
+        // and everything else in between.
+        switch newHeading.magneticHeading
+        {
+        case 0:
+            DirectionLabel.text = "N"
+        case 0..<90:
+            DirectionLabel.text = "NE"
+        case 90:
+            DirectionLabel.text = "E"
+        case 90..<180:
+            DirectionLabel.text = "SE"
+        case 180:
+            DirectionLabel.text = "S"
+        case 180..<270:
+            DirectionLabel.text = "SW"
+        case 270:
+            DirectionLabel.text = "W"
+        case 270..<360:
+            DirectionLabel.text = "NW"
+        default:
+            DirectionLabel.text = "Unavailable"
+        }
         
-                if DirectionLabel.text != "Unavailable" {
-                    resetCompassHeading(to: newHeading.magneticHeading)
-                }
-                else {
-                    resetCompassHeading(to: 0)
-                }
+        if DirectionLabel.text != "Unavailable" {
+            resetCompassHeading(to: newHeading.magneticHeading)
+        }
+        else {
+            resetCompassHeading(to: 0)
+        }
         
-
+        
     }
     
+    
     @objc func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        DirectionLabel.textColor = .red
+        DirectionLabel.text = "This feature is unavailable on this device."
         print("Failed to find user's heading: \(error.localizedDescription)")
         locationManager.stopUpdatingHeading()
         locationManager.startUpdatingLocation()
     }
-
+    
 }
