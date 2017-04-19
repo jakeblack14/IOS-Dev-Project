@@ -60,33 +60,34 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         return true
     }
     
+    // this function is called everytime the heading changes
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         print("My current heading is: " + newHeading.magneticHeading.description)
         
-        // A value of 0 means north, 90 means east,
-        // 180 means south, 270 means west
-        // and everything else in between.
         switch newHeading.magneticHeading
         {
         case 0..<10:
-            DirectionLabel.text = "N"
+            DirectionLabel.text = "N" // 0
         case 350..<360:
              DirectionLabel.text = "N"
-        case 0..<90:
+        case 10..<80:
             DirectionLabel.text = "NE"
-        case 90:
-            DirectionLabel.text = "E"
-        case 90..<180:
+        case 80..<100:
+            DirectionLabel.text = "E" // 90
+        case 100..<170:
             DirectionLabel.text = "SE"
-        case 180:
-            DirectionLabel.text = "S"
-        case 180..<270:
+        case 170..<190:
+            DirectionLabel.text = "S" // 180
+        case 190..<260:
             DirectionLabel.text = "SW"
-        case 270:
-            DirectionLabel.text = "W"
-        case 270..<360:
+        case 260..<280:
+            DirectionLabel.text = "W" // 270
+        case 280..<350:
             DirectionLabel.text = "NW"
         default:
+            // will only occur if a heading is 
+            // found but a value outside of 
+            // 0 - 360 is calculated
             DirectionLabel.text = "Unavailable"
         }
         
@@ -100,7 +101,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    
+    // if heading cannot be calculated
     @objc func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         DirectionLabel.textColor = .red
         DirectionLabel.text = "This feature is unavailable on this device."
