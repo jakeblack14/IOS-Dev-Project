@@ -101,9 +101,8 @@ extension UIImage {
         
         
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-                dismiss(animated: true, completion: nil)
-            }
+            dismiss(animated: true, completion: nil)
+            
         }
         
         
