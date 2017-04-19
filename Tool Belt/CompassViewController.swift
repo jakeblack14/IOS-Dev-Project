@@ -68,8 +68,10 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         // and everything else in between.
         switch newHeading.magneticHeading
         {
-        case 0:
+        case 0..<10:
             DirectionLabel.text = "N"
+        case 350..<360:
+             DirectionLabel.text = "N"
         case 0..<90:
             DirectionLabel.text = "NE"
         case 90:
