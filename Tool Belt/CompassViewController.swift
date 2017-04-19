@@ -87,6 +87,9 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         if DirectionLabel.text != "Unavailable" {
             resetCompassHeading(to: heading.magneticHeading)
         }
+        else {
+            resetCompassHeading(to: 0)
+        }
         
     }
     
