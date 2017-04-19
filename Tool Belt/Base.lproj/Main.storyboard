@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rer-io-v21">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rer-io-v21">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yq-Kp-uHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679.1999999999998" y="545.57721139430294"/>
+            <point key="canvasLocation" x="1740" y="1409"/>
         </scene>
         <!--Level-->
         <scene sceneID="pLh-Uu-QzE">
@@ -211,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="510-fC-ENj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="-125.4872563718141"/>
+            <point key="canvasLocation" x="1740" y="428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="85P-d7-JQd">
@@ -226,7 +226,7 @@
                         <segue destination="Zhu-tR-9af" kind="relationship" relationship="viewControllers" id="gAa-A2-4Ug"/>
                         <segue destination="YGf-cU-Grr" kind="relationship" relationship="viewControllers" id="Hgi-Vr-dJC"/>
                         <segue destination="D7i-4a-zQh" kind="relationship" relationship="viewControllers" id="6Xs-T7-Nby"/>
-                        <segue destination="Rxr-a7-jWF" kind="relationship" relationship="viewControllers" id="obI-z4-mnx"/>
+                        <segue destination="Rxr-a7-jWF" kind="relationship" relationship="viewControllers" id="XdN-wf-0p6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haF-DG-16b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ro-hi-tlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="-899"/>
+            <point key="canvasLocation" x="1740" y="-244"/>
         </scene>
         <!--Level-->
         <scene sceneID="gce-FR-6lm">
@@ -293,7 +293,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2T-vb-xLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="-125"/>
+            <point key="canvasLocation" x="801" y="428"/>
         </scene>
         <!--RGB-->
         <scene sceneID="eaC-JS-swh">
@@ -312,7 +312,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RG3-eb-hcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="546.47676161919048"/>
+            <point key="canvasLocation" x="801" y="1410"/>
         </scene>
         <!--Ruler-->
         <scene sceneID="ZIH-yb-Zm3">
@@ -331,7 +331,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o98-F6-XKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="-899"/>
+            <point key="canvasLocation" x="801" y="-244"/>
         </scene>
         <!--Compass-->
         <scene sceneID="oNA-n5-h0H">
@@ -368,14 +368,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6c-1G-ytl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="1307"/>
+            <point key="canvasLocation" x="1740" y="-1003"/>
         </scene>
         <!--Compass-->
         <scene sceneID="9XT-fc-IOT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rxr-a7-jWF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Compass" id="MNF-gX-9Pv"/>
+                    <tabBarItem key="tabBarItem" title="Compass" id="ZtI-Jf-hi5"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mYe-RE-ggp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -387,7 +388,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLQ-lv-6Tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="1307"/>
+            <point key="canvasLocation" x="801" y="-1003"/>
         </scene>
     </scenes>
     <resources>

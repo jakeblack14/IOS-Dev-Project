@@ -24,14 +24,12 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad")
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-    }
-    
-    // start updating the user's heading
-    override func viewWillAppear(_ animated: Bool) {
+        
         // location
         locationManager.distanceFilter = 1000;
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
@@ -39,6 +37,11 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         // heading
         locationManager.headingOrientation = .portrait
         locationManager.headingFilter = 5
+    }
+    
+    // start updating the user's heading
+    override func viewWillAppear(_ animated: Bool) {
+        print("viewWillAppear")
         locationManager.startUpdatingHeading()
     }
     
