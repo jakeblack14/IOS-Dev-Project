@@ -24,6 +24,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="White" translatesAutoresizingMaskIntoConstraints="NO" id="SaO-1w-j12">
                                 <rect key="frame" x="0.0" y="20" width="375" height="496"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.46384662838274249" green="0.83597737912392334" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-xo-1zH">
@@ -76,15 +77,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHP-6W-Xao">
-                                <rect key="frame" x="98" y="531" width="178" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.69862457225375363" green="0.85098836143674816" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Choose Image"/>
-                                <connections>
-                                    <action selector="photoFromLibrary:" destination="2hv-Ez-t9q" eventType="touchUpInside" id="Jlb-7S-22m"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6B-o0-lve">
                                 <rect key="frame" x="260" y="590" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,6 +84,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX3-Jg-xDA">
+                                <rect key="frame" x="196" y="532" width="179" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="shootPhoto:" destination="2hv-Ez-t9q" eventType="touchUpInside" id="a9P-9k-mJm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHP-6W-Xao">
+                                <rect key="frame" x="0.0" y="532" width="178" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Choose Image"/>
+                                <connections>
+                                    <action selector="photoFromLibrary:" destination="2hv-Ez-t9q" eventType="touchUpInside" id="Jlb-7S-22m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -100,13 +110,14 @@
                         <outlet property="BlueLabel" destination="p6B-o0-lve" id="Ue8-vy-c7k"/>
                         <outlet property="GreenLabel" destination="f2Q-TC-sZt" id="7fY-zN-O2h"/>
                         <outlet property="RedLabel" destination="Xik-YR-nF2" id="emT-5d-Igr"/>
+                        <outlet property="camera" destination="uX3-Jg-xDA" id="Ptv-Q8-vDh"/>
                         <outlet property="myImageView" destination="SaO-1w-j12" id="DWx-2r-5Pe"/>
                         <outlet property="photoFromLibrary" destination="gHP-6W-Xao" id="CV8-rj-5ha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yq-Kp-uHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1193" y="1255"/>
+            <point key="canvasLocation" x="1192.8" y="1254.4227886056972"/>
         </scene>
         <!--Level-->
         <scene sceneID="pLh-Uu-QzE">

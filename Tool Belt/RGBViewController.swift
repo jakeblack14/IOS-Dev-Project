@@ -52,6 +52,7 @@ extension UIImage {
         UIImagePickerControllerDelegate,
     UINavigationControllerDelegate  {
         
+        @IBOutlet weak var camera: UIButton!
         @IBOutlet weak var myImageView: UIImageView!
         @IBOutlet weak var photoFromLibrary: UIButton!
         @IBOutlet weak var RedLabel: UILabel!
@@ -60,7 +61,13 @@ extension UIImage {
         
         let picker = UIImagePickerController()
         
-       
+        @IBAction func shootPhoto(_ sender: UIButton) {
+            picker.allowsEditing = false
+            picker.sourceType = UIImagePickerControllerSourceType.camera
+            picker.cameraCaptureMode = .photo
+            picker.modalPresentationStyle = .fullScreen
+            present(picker,animated: true,completion: nil)
+        }
         
         @IBAction func photoFromLibrary(_ sender: UIButton) {
             picker.allowsEditing = false
