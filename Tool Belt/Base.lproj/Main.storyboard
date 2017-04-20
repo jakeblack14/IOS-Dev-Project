@@ -191,7 +191,7 @@
                                 <color key="textColor" red="1" green="0.025873014940000001" blue="0.1164182743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-rk-Q7a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-rk-Q7a">
                                 <rect key="frame" x="141" y="459" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Herculanum" family="Herculanum" pointSize="17"/>
@@ -411,7 +411,7 @@
     </scenes>
     <resources>
         <image name="Compass Tab" width="30" height="30"/>
-        <image name="Level" width="30" height="30"/>
+        <image name="Level" width="29" height="30"/>
         <image name="RGB" width="30" height="30"/>
         <image name="Ruler Tab" width="30" height="30"/>
         <image name="White" width="200" height="200"/>
