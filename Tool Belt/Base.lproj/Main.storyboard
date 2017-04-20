@@ -191,10 +191,10 @@
                                 <color key="textColor" red="1" green="0.025873014940000001" blue="0.1164182743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-rk-Q7a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-rk-Q7a">
                                 <rect key="frame" x="141" y="459" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Herculanum" family="Herculanum" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -291,7 +291,7 @@
         <scene sceneID="gce-FR-6lm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zhu-tR-9af" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Level" id="oyS-YN-pfC"/>
+                    <tabBarItem key="tabBarItem" title="Level" image="Level" id="oyS-YN-pfC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wC5-zv-K6D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -310,7 +310,7 @@
         <scene sceneID="eaC-JS-swh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YGf-cU-Grr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="RGB" id="xYM-N8-iw0"/>
+                    <tabBarItem key="tabBarItem" title="RGB" image="RGB" id="xYM-N8-iw0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Du-hS-qEa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -329,7 +329,7 @@
         <scene sceneID="ZIH-yb-Zm3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D7i-4a-zQh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ruler" id="QHx-ld-Isq"/>
+                    <tabBarItem key="tabBarItem" title="Ruler" image="Ruler Tab" id="QHx-ld-Isq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2E2-fe-C8h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -363,6 +363,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqX-Z6-fol">
                                 <rect key="frame" x="16" y="92" width="343" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content=" ">
                                         <attributes>
@@ -374,7 +375,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Compass" id="7FS-fX-Ykk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -391,7 +392,7 @@
         <scene sceneID="9XT-fc-IOT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rxr-a7-jWF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Compass" id="ZtI-Jf-hi5"/>
+                    <tabBarItem key="tabBarItem" title="Compass" image="Compass Tab" id="ZtI-Jf-hi5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mYe-RE-ggp">
@@ -409,6 +410,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Compass Tab" width="30" height="30"/>
+        <image name="Level" width="30" height="30"/>
+        <image name="RGB" width="30" height="30"/>
+        <image name="Ruler Tab" width="30" height="30"/>
         <image name="White" width="200" height="200"/>
         <image name="compass" width="300" height="289"/>
     </resources>

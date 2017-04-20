@@ -100,7 +100,7 @@ class LevelViewController: UIViewController {
                     else
                     {
                         self?.LevelLabel.text = " "
-                        self?.view.backgroundColor = UIColor.white
+                        self?.view.backgroundColor = UIColor.darkGray
                     }
                 }
             })

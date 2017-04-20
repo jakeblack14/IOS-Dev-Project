@@ -43,9 +43,9 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     // start updating the user's location/heading
     override func viewWillAppear(_ animated: Bool) {
         DirectionLabel.adjustsFontSizeToFitWidth = true
-        DirectionLabel.textColor = .blue
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
+        DirectionLabel.textColor = .white
     }
     
     // stop updating users location/heading when view disappears
@@ -67,7 +67,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         switch newHeading.magneticHeading
         {
         case 0..<10:
-            DirectionLabel.text = "N" // 0
+            DirectionLabel.text = "N"// 0
         case 350..<360:
              DirectionLabel.text = "N"
         case 10..<80:

@@ -99,7 +99,7 @@ extension UIImage {
       
        
         
-        func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject])
+        @nonobjc func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : AnyObject])
         {
             let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
             myImageView.contentMode = .scaleAspectFit //3
