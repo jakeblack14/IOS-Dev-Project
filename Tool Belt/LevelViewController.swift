@@ -22,7 +22,7 @@ class LevelViewController: UIViewController {
     
     @IBOutlet weak var XLabel: UILabel!
     @IBOutlet weak var YLabel: UILabel!
-    @IBOutlet weak var ZLabel: UILabel!
+    //@IBOutlet weak var ZLabel: UILabel!
     @IBOutlet weak var ErrorLabel: UILabel!
     @IBOutlet weak var LevelLabel: UILabel!
 
@@ -44,15 +44,15 @@ class LevelViewController: UIViewController {
             YSlider.maximumValue = 1;
         }
     }
-    @IBOutlet weak var ZSlider: UISlider!
-        {
-        didSet
-        {
-            ZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
-            ZSlider.minimumValue = -2;
-            ZSlider.maximumValue = 0;
-        }
-    }
+//    @IBOutlet weak var ZSlider: UISlider!
+//        {
+//        didSet
+//        {
+//            ZSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+//            ZSlider.minimumValue = -2;
+//            ZSlider.maximumValue = 0;
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,39 +68,42 @@ class LevelViewController: UIViewController {
                 if let acceleration = data?.acceleration {
                     self?.XLabel.text = acceleration.x.roundTo(places: 2).description
                     self?.YLabel.text = acceleration.y.roundTo(places: 2).description
-                    self?.ZLabel.text = acceleration.z.roundTo(places: 2).description
+                   // self?.ZLabel.text = acceleration.z.roundTo(places: 2).description
                     self?.XSlider.setValue(Float(String(format: "%.2f",acceleration.x))!, animated: true)
                     self?.YSlider.setValue(Float(String(format: "%.2f",acceleration.y))!, animated: true)
-                    self?.ZSlider.setValue(Float(String(format: "%.2f",acceleration.z))!, animated: true)
+                    //self?.ZSlider.setValue(Float(String(format: "%.2f",acceleration.z))!, animated: true)
                     
                     if ((acceleration.x <= 0.02 && acceleration.x >= -0.02 && acceleration.y <= 0.02 && acceleration.y >= -0.02))
                     {
                         self?.LevelLabel.text = "LEVEL"
                         self?.view.backgroundColor = UIColor.cyan
-                        self?.ZSlider.setValue(-1, animated: true)
+                       // self?.ZSlider.setValue(-1, animated: true)
                         self?.YSlider.setValue(0, animated: true)
                         self?.XSlider.setValue(0, animated: true)
                         
                     }
-                    else if ((acceleration.x <= 1.02 && acceleration.x >= 0.98 && acceleration.y <= 0.02 && acceleration.y >= -0.02) && acceleration.z <= 0.02 && acceleration.z >= -0.02)
+                    else if ((acceleration.x <= 1.02 && acceleration.x >= 0.98 && acceleration.y <= 0.02 && acceleration.y >= -0.02))// && acceleration.z <= 0.02 && acceleration.z >= -0.02)
                     {
                         self?.LevelLabel.text = "LEVEL"
                         self?.view.backgroundColor = UIColor.cyan
                     }
-                    else if ((acceleration.y <= 0.02 && acceleration.y >= -0.02) && acceleration.z <= 0.02 && acceleration.z >= -0.02)
+                    else if ((acceleration.y <= 0.02 && acceleration.y >= -0.02))// && acceleration.z <= 0.02 && acceleration.z >= -0.02)
                     {
                         self?.LevelLabel.text = "LEVEL"
                         self?.view.backgroundColor = UIColor.cyan
                     }
-                    else if ((acceleration.x <= 0.02 && acceleration.x >= -0.02 && acceleration.y <= 1.02 && acceleration.y >= -0.98) && acceleration.z <= 0.02 && acceleration.z >= -0.02)
+                    else if ((acceleration.x <= 0.02 && acceleration.x >= -0.02 && acceleration.y <= 1.02 && acceleration.y >= -0.98))// && acceleration.z <= 0.02 && acceleration.z >= -0.02)
                     {
                         self?.LevelLabel.text = "LEVEL"
                         self?.view.backgroundColor = UIColor.cyan
+                        
                     }
                     else
                     {
                         self?.LevelLabel.text = " "
                         self?.view.backgroundColor = UIColor.darkGray
+                        self?.XSlider.isHidden = false
+                        
                     }
                 }
             })
@@ -108,11 +111,11 @@ class LevelViewController: UIViewController {
         else {
             XLabel.text = "Could not be calculated."
             YLabel.text = "Could not be calculated."
-            ZLabel.text = "Could not be calculated."
+          //  ZLabel.text = "Could not be calculated."
             ErrorLabel.text = "This feature is unavailable on this device."
             XSlider.setValue(0, animated: false)
             YSlider.setValue(0, animated: false)
-            ZSlider.setValue(0, animated: false)
+          //  ZSlider.setValue(0, animated: false)
         }
     }
     
