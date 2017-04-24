@@ -4,6 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) camera use</string>
+	<key>NSMotionUsageDescription</key>
+	<string>ToolBox Pedometer would like your permission to access your device to count your steps.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow RGB to access photos on this device?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

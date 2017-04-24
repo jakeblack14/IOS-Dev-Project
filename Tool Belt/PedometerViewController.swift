@@ -43,6 +43,10 @@ class PedometerViewController: UIViewController {
     @IBOutlet weak var paceLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     
+    
+    
+    
+    
     @IBAction func startStopButton(_ sender: UIButton) {
         if sender.titleLabel?.text == "Start"{
             //Start the pedometer
