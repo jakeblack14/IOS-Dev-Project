@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF670BB11EA910960080FED0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF670BB01EA910960080FED0 /* Default-568h@2x.png */; };
-		D3197AA31E9466FD00BB6802 /* RulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197AA21E9466FD00BB6802 /* RulerViewController.swift */; };
+		D3197AA31E9466FD00BB6802 /* PedometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197AA21E9466FD00BB6802 /* PedometerViewController.swift */; };
 		D3197AA51E94696900BB6802 /* RGBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197AA41E94696900BB6802 /* RGBViewController.swift */; };
 		D3197AA71E946AA000BB6802 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197AA61E946AA000BB6802 /* CompassViewController.swift */; };
 		D38F25751E8DDF8800A13D3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F25741E8DDF8800A13D3A /* AppDelegate.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		BF670BB01EA910960080FED0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D3197AA21E9466FD00BB6802 /* RulerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulerViewController.swift; sourceTree = "<group>"; };
+		D3197AA21E9466FD00BB6802 /* PedometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedometerViewController.swift; sourceTree = "<group>"; };
 		D3197AA41E94696900BB6802 /* RGBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBViewController.swift; sourceTree = "<group>"; };
 		D3197AA61E946AA000BB6802 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		D38F25711E8DDF8800A13D3A /* Tool Belt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tool Belt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +66,7 @@
 				D38F25741E8DDF8800A13D3A /* AppDelegate.swift */,
 				D38F25781E8DDF8800A13D3A /* Main.storyboard */,
 				D3197AA41E94696900BB6802 /* RGBViewController.swift */,
-				D3197AA21E9466FD00BB6802 /* RulerViewController.swift */,
+				D3197AA21E9466FD00BB6802 /* PedometerViewController.swift */,
 				D3197AA61E946AA000BB6802 /* CompassViewController.swift */,
 				D3D6723E1E92C9530007CBA1 /* LevelViewController.swift */,
 				D38F257B1E8DDF8800A13D3A /* Assets.xcassets */,
@@ -153,7 +153,7 @@
 				D3197AA71E946AA000BB6802 /* CompassViewController.swift in Sources */,
 				D3D6723F1E92C9530007CBA1 /* LevelViewController.swift in Sources */,
 				D3197AA51E94696900BB6802 /* RGBViewController.swift in Sources */,
-				D3197AA31E9466FD00BB6802 /* RulerViewController.swift in Sources */,
+				D3197AA31E9466FD00BB6802 /* PedometerViewController.swift in Sources */,
 				D38F25751E8DDF8800A13D3A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
