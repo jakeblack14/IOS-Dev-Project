@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rer-io-v21">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rer-io-v21">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -360,7 +360,7 @@
         <scene sceneID="ZIH-yb-Zm3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D7i-4a-zQh" userLabel="Pedometer" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NTr-Ns-8hN"/>
+                    <tabBarItem key="tabBarItem" title="Pedometer" image="Pedometer" selectedImage="Pedometer" id="NTr-Ns-8hN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2E2-fe-C8h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -443,6 +443,7 @@
     <resources>
         <image name="Compass Tab" width="30" height="30"/>
         <image name="Level" width="29" height="30"/>
+        <image name="Pedometer" width="30" height="30"/>
         <image name="RGB" width="30" height="30"/>
         <image name="White" width="200" height="200"/>
         <image name="compass" width="300" height="289"/>
