@@ -46,6 +46,19 @@ class PedometerViewController: UIViewController {
     
     
     
+    @IBAction func ResetButton(_ sender: UIButton) {
+        statusTitle.text = "ToolBox Pedometer"
+        stepsLabel.text = "None"
+        paceLabel.text = "None"
+        avgPaceLabel.text = "None"
+        distanceLabel.text = "None"
+        numberOfSteps = 0
+        pace = 0.0
+        averagePace = 0
+        distance = 0.0
+        timeElapsed = 0
+        
+    }
     
     @IBAction func startStopButton(_ sender: UIButton) {
         if sender.titleLabel?.text == "Start"{
@@ -73,7 +86,7 @@ class PedometerViewController: UIViewController {
             statusTitle.text = "Pedometer On"
             sender.setTitle("Stop", for: .normal)
             sender.backgroundColor = stopColor
-        } else {
+        } else if sender.titleLabel?.text == "Stop"{
             //Stop the pedometer
             pedometer.stopUpdates()
             stopTimer()
@@ -108,7 +121,7 @@ class PedometerViewController: UIViewController {
         
         //distance
         if let distance = self.distance{
-            distanceLabel.text = String(format:"Distance: %02.02f meters,\n %02.02f mi",distance,miles(meters: distance))
+            distanceLabel.text = String(format:"Distance: %02.02f meters \n %02.02f mi",distance,miles(meters: distance))
         } else {
             distanceLabel.text = "Distance: N/A"
         }
