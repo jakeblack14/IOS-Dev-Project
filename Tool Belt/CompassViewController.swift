@@ -20,7 +20,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
     // transform compass arrow to point north at all times
     private func resetCompassHeading(to direction: Double?) {
         // must convert degrees to radians
-        CompassImageView.transform = CGAffineTransform(rotationAngle: CGFloat(direction! * .pi / 180))
+        CompassImageView.transform = CGAffineTransform(rotationAngle: -CGFloat(direction! * .pi / 180))
     }
     
     override func viewDidLoad() {
@@ -67,21 +67,21 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         switch newHeading.magneticHeading
         {
         case 0..<10:
-            DirectionLabel.text = "N"// 0
+            DirectionLabel.text = "N"// 0 = N
         case 350..<360:
              DirectionLabel.text = "N"
         case 10..<80:
             DirectionLabel.text = "NE"
         case 80..<100:
-            DirectionLabel.text = "E" // 90
+            DirectionLabel.text = "E" // 90 = E
         case 100..<170:
             DirectionLabel.text = "SE"
         case 170..<190:
-            DirectionLabel.text = "S" // 180
+            DirectionLabel.text = "S" // 180 = S
         case 190..<260:
             DirectionLabel.text = "SW"
         case 260..<280:
-            DirectionLabel.text = "W" // 270
+            DirectionLabel.text = "W" // 270 = W
         case 280..<350:
             DirectionLabel.text = "NW"
         default:
