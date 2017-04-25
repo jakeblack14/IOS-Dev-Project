@@ -109,8 +109,8 @@ class LevelViewController: UIViewController {
             })
         }
         else {
-            XLabel.text = "Could not be calculated."
-            YLabel.text = "Could not be calculated."
+            XLabel.text = "N/A"
+            YLabel.text = "N/A"
           //  ZLabel.text = "Could not be calculated."
             ErrorLabel.text = "This feature is unavailable on this device."
             XSlider.setValue(0, animated: false)
