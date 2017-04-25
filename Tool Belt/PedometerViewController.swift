@@ -48,10 +48,10 @@ class PedometerViewController: UIViewController {
     
     @IBAction func ResetButton(_ sender: UIButton) {
         statusTitle.text = "ToolBox Pedometer"
-        stepsLabel.text = "None"
-        paceLabel.text = "None"
-        avgPaceLabel.text = "None"
-        distanceLabel.text = "None"
+        stepsLabel.text = "Steps:"
+        paceLabel.text = "Pace:"
+        avgPaceLabel.text = "Average Pace:"
+        distanceLabel.text = "Distance:"
         numberOfSteps = 0
         pace = 0.0
         averagePace = 0
@@ -128,9 +128,9 @@ class PedometerViewController: UIViewController {
         
         //average pace
         if let averagePace = self.averagePace{
-            avgPaceLabel.text = paceString(title: "Avg Pace", pace: averagePace)
+            avgPaceLabel.text = paceString(title: "Average Pace", pace: averagePace)
         } else {
-            avgPaceLabel.text =  paceString(title: "Avg Comp Pace", pace: computedAvgPace())
+            avgPaceLabel.text =  paceString(title: "Average Pace", pace: computedAvgPace())
         }
         
         //pace
@@ -139,7 +139,7 @@ class PedometerViewController: UIViewController {
             paceLabel.text = paceString(title: "Pace:", pace: pace)
         } else {
             paceLabel.text = "Pace: N/A "
-            paceLabel.text =  paceString(title: "Avg Comp Pace", pace: computedAvgPace())
+            paceLabel.text =  paceString(title: "Pace", pace: computedAvgPace())
         }
     }
     
