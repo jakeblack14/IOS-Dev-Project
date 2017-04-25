@@ -71,19 +71,19 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         case 350..<360:
              DirectionLabel.text = "N"
         case 10..<80:
-            DirectionLabel.text = "NW"
+            DirectionLabel.text = "NE"
         case 80..<100:
-            DirectionLabel.text = "W" // 90
+            DirectionLabel.text = "E" // 90
         case 100..<170:
-            DirectionLabel.text = "SW"
+            DirectionLabel.text = "SE"
         case 170..<190:
             DirectionLabel.text = "S" // 180
         case 190..<260:
-            DirectionLabel.text = "SE"
+            DirectionLabel.text = "SW"
         case 260..<280:
-            DirectionLabel.text = "E" // 270
+            DirectionLabel.text = "W" // 270
         case 280..<350:
-            DirectionLabel.text = "NE"
+            DirectionLabel.text = "NW"
         default:
             // will only occur if a heading is 
             // found but a value outside of 
