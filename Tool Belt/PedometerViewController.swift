@@ -11,19 +11,17 @@ import CoreMotion
 
 class PedometerViewController: UIViewController {
     
-    //MARK: - Properties and Constants
+    //Colors for the Start/Stop button
     let stopColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
     let startColor = UIColor(red: 0.0, green: 0.75, blue: 0.0, alpha: 1.0)
+    
+    
     // values for the pedometer data
     var numberOfSteps:Int! = nil
-    /*{ //this does not work. for demo purposes only.
-     didSet{
-     stepsLabel.text = "Steps:\(numberOfSteps)"
-     }
-     }*/
     var distance:Double! = nil
     var averagePace:Double! = nil
     var pace:Double! = nil
+    
     
     //the pedometer
     var pedometer = CMPedometer()
@@ -35,8 +33,7 @@ class PedometerViewController: UIViewController {
     
     
     
-    //MARK: - Outlets
-    
+    //Outlets
     @IBOutlet weak var statusTitle: UILabel!
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var avgPaceLabel: UILabel!
@@ -45,7 +42,7 @@ class PedometerViewController: UIViewController {
     
     
     
-    
+    //Action Reset Button
     @IBAction func ResetButton(_ sender: UIButton) {
         statusTitle.text = "ToolBox Pedometer"
         stepsLabel.text = "Steps:"
@@ -60,15 +57,16 @@ class PedometerViewController: UIViewController {
         
     }
     
+    //Action Start/Stop Button
     @IBAction func startStopButton(_ sender: UIButton) {
         if sender.titleLabel?.text == "Start"{
+            
             //Start the pedometer
             pedometer = CMPedometer()
             startTimer()
             pedometer.startUpdates(from: Date(), withHandler: { (pedometerData, error) in
                 if let pedData = pedometerData{
                     self.numberOfSteps = Int(pedData.numberOfSteps)
-                    //self.stepsLabel.text = "Steps:\(pedData.numberOfSteps)"
                     if let distance = pedData.distance{
                         self.distance = Double(distance)
                     }
@@ -82,7 +80,8 @@ class PedometerViewController: UIViewController {
                     self.numberOfSteps = nil
                 }
             })
-            //Toggle the UI to on state
+            
+            //Set the UI to on state
             statusTitle.text = "Pedometer On"
             sender.setTitle("Stop", for: .normal)
             sender.backgroundColor = stopColor
@@ -90,13 +89,14 @@ class PedometerViewController: UIViewController {
             //Stop the pedometer
             pedometer.stopUpdates()
             stopTimer()
-            //Toggle the UI to off state
+            //Set the UI to off state
             statusTitle.text = "Pedometer Off: " + timeIntervalFormat(interval: timeElapsed)
             sender.backgroundColor = startColor
             sender.setTitle("Start", for: .normal)
         }
     }
-    //MARK: - timer functions
+    
+    //Timer functions
     func startTimer(){
         if timer.isValid { timer.invalidate() }
         timer = Timer.scheduledTimer(timeInterval: timerInterval,target: self,selector: #selector(timerAction(timer:)) ,userInfo: nil,repeats: true)
@@ -110,10 +110,12 @@ class PedometerViewController: UIViewController {
     func timerAction(timer:Timer){
         displayPedometerData()
     }
-    // display the updated data
+    
+    //Display the updated data
     func displayPedometerData(){
         timeElapsed += 1.0
         statusTitle.text = "On: " + timeIntervalFormat(interval: timeElapsed)
+        
         //Number of steps
         if let numberOfSteps = self.numberOfSteps{
             stepsLabel.text = String(format:"Steps: %i",numberOfSteps)
@@ -143,9 +145,8 @@ class PedometerViewController: UIViewController {
         }
     }
     
-    //MARK: - Display and time format functions
-    
-    // convert seconds to hh:mm:ss as a string
+    //Display and time format functions
+    //Convert seconds to hh:mm:ss as a string
     func timeIntervalFormat(interval:TimeInterval)-> String{
         var seconds = Int(interval + 0.5) //round up seconds
         let hours = seconds / 3600
@@ -153,11 +154,12 @@ class PedometerViewController: UIViewController {
         seconds = seconds % 60
         return String(format:"%02i:%02i:%02i",hours,minutes,seconds)
     }
+    
     // convert a pace in meters per second to a string with
     // the metric m/s and the Imperial minutes per mile
     func paceString(title:String,pace:Double) -> String{
         var minPerMile = 0.0
-        let factor = 26.8224 //conversion factor
+        let factor = 26.8224 //conversion factor found on Google =)
         if pace != 0 {
             minPerMile = factor / pace
         }
@@ -182,12 +184,11 @@ class PedometerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
