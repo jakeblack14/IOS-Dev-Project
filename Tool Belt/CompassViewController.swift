@@ -73,7 +73,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         case 10..<80:
             DirectionLabel.text = "NW"
         case 80..<100:
-            DirectionLabel.text = "E" // 90
+            DirectionLabel.text = "W" // 90
         case 100..<170:
             DirectionLabel.text = "SW"
         case 170..<190:
@@ -81,7 +81,7 @@ class CompassViewController: UIViewController, CLLocationManagerDelegate {
         case 190..<260:
             DirectionLabel.text = "SE"
         case 260..<280:
-            DirectionLabel.text = "W" // 270
+            DirectionLabel.text = "E" // 270
         case 280..<350:
             DirectionLabel.text = "NE"
         default:
